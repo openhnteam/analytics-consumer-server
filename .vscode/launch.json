@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "启动调试",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run",
+        "start:dev"
+      ],
+      // 日志输出到 Terminal，否则启动期的日志看不到
+      "console": "integratedTerminal",
+      "protocol": "auto",
+      // 进程重启后自动 attach
+      "restart": true,
+      "port": 8081,
+      // 自动 attach 子进程
+      "autoAttachChildProcesses": true
+    }
+  ]
+}
